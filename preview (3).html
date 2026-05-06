@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Shockwave SMP</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #0a0f2c, #0d1b4c);
+    color: white;
+    overflow-x: hidden;
+}
+
+header {
+    background: #08123a;
+    padding: 20px;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #4da6ff;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: #0c1a5a;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 5px 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #4da6ff;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    color: #4da6ff;
+}
+
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.store {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.item {
+    background: #101f66;
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+}
+
+.item h3 {
+    color: #4da6ff;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #4da6ff;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #80c1ff;
+}
+
+footer {
+    background: #08123a;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+.small-text {
+    font-size: 0.8em;
+    opacity: 0.8;
+    margin-top: 10px;
+}
+
+.snowflake {
+    position: fixed;
+    top: -10px;
+    font-size: 10px;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to { transform: translateY(100vh); }
+}
+</style>
+</head>
+
+<body>
+
+<header>Shockwave SMP</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#store">Store</a>
+    <a href="#about">About</a>
+    <a href="#terms">Terms</a>
+    <a href="#privacy">Privacy</a>
+</nav>
+
+<div class="hero">
+    <h1>Welcome to Shockwave SMP</h1>
+    <p>The ultimate survival experience.</p>
+    <p><strong>IP:</strong> play.shockwavesmp.com</p>
+</div>
+
+<div id="store" class="section">
+    <h2>Server Store</h2>
+
+    <div class="store">
+        <div class="item">
+            <h3>Shockwave Rank</h3>
+            <p>Exclusive perks and commands.</p>
+            <p><strong>£4.50</strong></p>
+            <a href="#" class="btn">Buy</a>
+        </div>
+
+        <div class="item">
+            <h3>Shockwave+ Rank</h3>
+            <p>More perks and bonuses.</p>
+            <p><strong>£9.50</strong></p>
+            <a href="#" class="btn">Buy</a>
+        </div>
+
+        <div class="item">
+            <h3>Strength Key</h3>
+            <p>Crate rewards.</p>
+            <p><strong>£2.99</strong></p>
+            <a href="#" class="btn">Buy</a>
+        </div>
+    </div>
+
+    <p class="small-text">
+        All purchases are final. Virtual items have no real-world value.
+    </p>
+</div>
+
+<div id="about" class="section">
+    <h2>About</h2>
+    <p>Shockwave SMP is a competitive survival multiplayer server with custom features.</p>
+</div>
+
+<div id="terms" class="section">
+    <h2>Terms of Service</h2>
+    <p>By purchasing from this store, you agree that:</p>
+    <p>- All items are virtual and non-refundable unless required by law.</p>
+    <p>- We may modify or remove items at any time.</p>
+    <p>- Breaking server rules may result in loss of purchased items.</p>
+    <p>- Chargebacks will result in a permanent ban.</p>
+</div>
+
+<div id="privacy" class="section">
+    <h2>Privacy Policy</h2>
+    <p>We only collect necessary data to process purchases.</p>
+    <p>Your information is never sold or shared.</p>
+    <p>Payments are handled securely by third-party providers.</p>
+</div>
+
+<!-- ✅ ADDED DISCORD HELP SECTION -->
+<div class="section">
+    <h2>Discord</h2>
+    <p>You can find help at our Discord: 
+        <a href="https://discord.gg/unSDeab9" target="_blank">https://discord.gg/unSDeab9</a>
+    </p>
+</div>
+
+<footer>
+    <p>© 2026 Shockwave SMP</p>
+    <p class="small-text">
+        NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.
+    </p>
+</footer>
+
+<script>
+function createSnowflake() {
+    const snowflake = document.createElement("div");
+    snowflake.classList.add("snowflake");
+    snowflake.innerHTML = "❄";
+
+    snowflake.style.left = Math.random() * window.innerWidth + "px";
+    snowflake.style.animationDuration = (Math.random() * 3 + 2) + "s";
+
+    document.body.appendChild(snowflake);
+
+    setTimeout(() => snowflake.remove(), 5000);
+}
+
+setInterval(createSnowflake, 120);
+</script>
+
+</body>
+</html>
